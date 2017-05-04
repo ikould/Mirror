@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/fl_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/main_line" />
+
+    <View
+        android:id="@+id/main_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:layout_above="@+id/main_bottom"
+        android:background="@color/light_dark" />
+
+    <LinearLayout
+        android:id="@+id/main_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/main_tab_video"
+            style="@style/more_tab_item"
+            android:drawableTop="@drawable/ic_video"
+            android:text="视频" />
+
+        <View
+            android:layout_width="0.4dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:background="@color/dark" />
+
+        <TextView
+            android:id="@+id/main_tab_monitor"
+            style="@style/more_tab_item"
+            android:drawableTop="@drawable/ic_photo"
+            android:text="照片" />
+    </LinearLayout>
+</RelativeLayout>
